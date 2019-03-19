@@ -1,0 +1,14 @@
+#Flask==0.10.1
+mysqlclient
+Flask-RESTful
+Flask-Cache
+flask-orator
+Flask
+gunicorn
+Cerberus
+Flask-JWT-Extended
+var-dump
+appdirs
+logstash-formatter
+pytest-cov
+requests

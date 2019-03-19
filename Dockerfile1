@@ -1,0 +1,5 @@
+FROM python:3.6.5
+MAINTAINER Your Name "aji@sepulsa.com"
+RUN mkdir -p /demo
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install -r /tmp/requirements.txt
