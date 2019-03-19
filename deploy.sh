@@ -2,7 +2,7 @@
 
 eval "$(ssh-agent -s)" &&
 ssh-add -k ~/.ssh/id_rsa &&
-cd $ROOT_DIR
+cd /var/www/helloworld
 git pull
 
 echo "$DOCKERHUB_PASS" | docker login --username $DOCKERHUB_USER --password-stdin
