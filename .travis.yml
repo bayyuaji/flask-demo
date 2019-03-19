@@ -14,7 +14,7 @@ before_install:
 - chmod 600 deploy_rsa
 - ssh-add deploy_rsa
 before_script:
-- echo "$DOCKER_PASS" | docker login --username $DOCKERHUB_USER --password-stdin
+- echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
 script:
 - chmod +x deploy.sh
 - chmod 600 deploy_rsa
