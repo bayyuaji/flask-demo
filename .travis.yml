@@ -18,7 +18,6 @@ script:
 - sudo chmod +x deploy.sh
 - sudo chmod 600 deploy_rsa
 after_script:
-        #- docker login --username $DOCKER_USERNAME --password $DOCKER_PASSWORD
 - docker build -t ${DOCKER_HUB_ORG}/${DOCKER_IMAGE_NAME}:production-${TRAVIS_BUILD_ID} .
 - docker push ${DOCKER_HUB_ORG}/${DOCKER_IMAGE_NAME}:production-${TRAVIS_BUILD_ID}
 - docker tag ${DOCKER_HUB_ORG}/${DOCKER_IMAGE_NAME}:production-${TRAVIS_BUILD_ID}
