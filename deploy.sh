@@ -11,7 +11,4 @@ docker stop helloworld
 docker rm helloworld
 docker rmi ajisepulsa/helloworld
 docker run -d --name helloworld -p 5000:5000 ajisepulsa/helloworld:latest
-cat coba/coba
-sudo chmod +x coba/coba
-sh coba/coba
 
