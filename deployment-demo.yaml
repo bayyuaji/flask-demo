@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: nginx-deployment
   namespace: coba
-  #kubernetes.io/change-cause: upgrade nginx version
 spec:
   replicas: 3
   selector:
@@ -21,4 +20,4 @@ spec:
     spec:
       containers:
       - name: app
-        image: nginx:1.17.6
+        image: nginx:1.17.5
