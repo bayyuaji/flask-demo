@@ -9,6 +9,11 @@ spec:
   selector:
     matchLabels:
       name: app
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
   template:
     metadata:
       labels:
@@ -16,4 +21,4 @@ spec:
     spec:
       containers:
       - name: app
-        image: nginx:nginx:1.17.6
+        image: nginx:1.17.6
