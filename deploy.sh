@@ -9,6 +9,6 @@ source ~/.profile
 echo "$DOCKERHUB_PASS" | docker login --username $DOCKERHUB_USER --password-stdin
 docker stop backend
 docker rm backend
-docker rmi ajisepulsa/alta
+docker rmi ajisepulsa/alta:latest
 docker run -d --name backend -p 5000:5000 ajisepulsa/alta:latest
 
