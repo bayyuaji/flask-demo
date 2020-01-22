@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hugo-blue
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: hugo-canary
+        track: stable
+    spec:
+      containers:
+        - name: hugo
+          image: ajisepulsa/hugo-app:blue
+          ports:
+            - containerPort: 80
