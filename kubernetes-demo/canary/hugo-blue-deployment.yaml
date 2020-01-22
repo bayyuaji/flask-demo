@@ -12,6 +12,6 @@ spec:
     spec:
       containers:
         - name: hugo
-          image: ajisepulsa/hugo-app:blue
+          image: ajisepulsa/hugo:blue
           ports:
             - containerPort: 80
