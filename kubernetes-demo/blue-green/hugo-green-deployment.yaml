@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hugo-green
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: hugo-blue-green
+        color: green
+    spec:
+      containers:
+        - name: hugo
+          image: ajisepulsa/hugo:green
+          ports:
+            - containerPort: 80
